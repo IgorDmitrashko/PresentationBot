@@ -1,0 +1,34 @@
+2024-10-16 21:23:43,789 - INFO - Main menu sent to user 1475149178
+2024-10-16 21:23:44,727 - INFO - Exchange rates sent to user 1475149178
+2024-10-16 21:23:45,764 - INFO - Weather info sent to user 1475149178
+2024-10-16 21:23:46,396 - INFO - Vending menu shown to user 1475149178
+2024-10-16 21:23:47,214 - INFO - Main menu shown to user 1475149178
+2024-10-16 21:23:48,496 - INFO - NASA image sent to user 1475149178
+2024-10-16 21:23:49,504 - INFO - About us sent to user 1475149178
+2024-10-16 21:26:54,598 - INFO - Main menu sent to user 1475149178
+2024-10-16 21:26:55,694 - ERROR - Failed to send exchange rates: list index out of range
+2024-10-16 21:28:59,992 - INFO - Main menu sent to user 1475149178
+2024-10-16 21:29:01,445 - INFO - Weather info sent to user 1475149178
+2024-10-16 21:29:02,154 - ERROR - Failed to send exchange rates: 'InvalidSchema' object is not subscriptable
+2024-10-16 21:32:00,076 - INFO - Main menu sent to user 1475149178
+2024-10-16 21:32:01,018 - INFO - Weather info sent to user 1475149178
+2024-10-16 21:35:35,062 - INFO - Main menu sent to user 1475149178
+2024-10-16 21:35:36,313 - INFO - Weather info sent to user 1475149178
+2024-10-16 21:36:50,569 - INFO - Main menu sent to user 1475149178
+2024-10-16 21:36:51,823 - INFO - Weather info sent to user 1475149178
+2024-10-16 21:37:55,213 - ERROR - Failed to send exchange rates: 'InvalidSchema' object is not subscriptable
+2024-10-16 21:37:57,415 - INFO - Weather info sent to user 1475149178
+2024-10-16 21:39:08,149 - INFO - Main menu sent to user 1475149178
+2024-10-16 21:39:09,012 - ERROR - Failed to send weather info: 'InvalidSchema' object is not subscriptable
+2024-10-16 21:40:35,331 - ERROR - Failed to send weather info: 'InvalidSchema' object is not subscriptable
+2024-10-16 21:42:31,320 - INFO - Main menu sent to user 1475149178
+2024-10-16 21:42:32,217 - ERROR - Failed to send exchange rates: 'InvalidSchema' object is not subscriptable
+2024-10-16 21:44:58,974 - INFO - Main menu sent to user 1475149178
+2024-10-16 21:44:59,610 - ERROR - Failed to send weather info: 'InvalidSchema' object is not subscriptable
+2024-10-16 21:45:04,565 - INFO - Exchange rates sent to user 1475149178
+2024-10-16 21:45:05,792 - ERROR - Failed to send weather info: 'InvalidSchema' object is not subscriptable
+2024-10-16 21:45:14,615 - INFO - Main menu sent to user 1475149178
+2024-10-16 21:45:16,076 - INFO - Weather info sent to user 1475149178
+2024-10-16 21:45:17,304 - INFO - Exchange rates sent to user 1475149178
+2024-10-16 21:45:18,621 - INFO - Weather info sent to user 1475149178
+2024-10-16 21:47:05,679 - ERROR - Failed to send NASA image: 'InvalidSchema' object is not subscriptable
