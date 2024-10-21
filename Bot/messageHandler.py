@@ -5,6 +5,7 @@ import config
 import disposable_mail
 import jsonParser
 import logging
+import siteParser
 
 bot = bot.Bot(config.BOT_TOKEN)
 disposable_mail = disposable_mail.Disposable_mail()
@@ -19,6 +20,7 @@ class MessageHandler:
         self.parser = jsonParser.JsonParser()
         self.button = button.Button()
         self.disposable_mail = disposable_mail
+        self.site_parser = siteParser.SiteParser()
         self.commands_handler()
 
     def commands_handler(self):
@@ -27,13 +29,6 @@ class MessageHandler:
         self.tg_bot.message_handler(content_types=['text'])(self.handle_text)
         self.tg_bot.message_handler(content_types=['contact'])(self.handle_contact)
         self.tg_bot.callback_query_handler(func=lambda callback: True)(self.handle_callback)
-
-    def welcome(self, message):
-        self.send_start_menu(message)
-
-    def test_command(self, message):
-        if not self.initialize_database(message):
-            return
 
     def handle_text(self, message):
         if message.text == 'Тест':
@@ -45,10 +40,6 @@ class MessageHandler:
         elif message.text == self.button.vendingMashins:
             self.send_vending_menu(message)
 
-    def handle_contact(self, message):
-        if message.contact:
-            self.tg_bot.send_message(message.chat.id, text=str(message.contact))
-
     def handle_callback(self, callback):
         handlers = {
             'rate': self.send_exchange_rate,
@@ -57,10 +48,25 @@ class MessageHandler:
             'vending': self.show_vending_menu,
             'back': self.show_main_menu,
             'bianchi': self.send_bianchi_link,
-
+            'orki':self.send_orki,
+            'iphone': self.send_price_iphone,
         }
         handler = handlers.get(callback.data, self.handle_unknown_callback)
         handler(callback)
+
+    def welcome(self, message):
+        self.send_start_menu(message)
+
+    def test_command(self, message):
+        if not self.initialize_database(message):
+
+            return
+
+    def handle_contact(self, message):
+        if message.contact:
+            self.tg_bot.send_message(message.chat.id, text=str(message.contact))
+            logging.info("Contact processed")
+
 
     def initialize_database(self, message):
         try:
@@ -81,6 +87,26 @@ class MessageHandler:
             logging.info("Start menu sent to user %s", message.chat.id)
             self.tg_bot.send_message(message.chat.id, text='УПС!!\nЯкась помилка')
 
+    def send_price_iphone(self, callback):
+        try:
+            self.tg_bot.send_message(callback.message.chat.id, text=self.site_parser.get_price_iphone15())
+            self.tg_bot.delete_message(callback.message.chat.id, callback.message.message_id)
+            logging.info("Price Iphone sent to user %s", callback.message.chat.id)
+        except Exception as ex:
+            logging.error("Failed to send Price Iphone: %s", ex)
+            self.tg_bot.send_message(callback.message.chat.id, f"{self.site_parser.get_price_iphone15()}")
+
+    def send_orki(self, callback):
+        try:
+            self.tg_bot.send_message(callback.message.chat.id, text=self.site_parser.get_orki())
+            self.tg_bot.delete_message(callback.message.chat.id, callback.message.message_id)
+            logging.info("Orki sent to user %s", callback.message.chat.id)
+        except Exception as ex:
+            logging.error("Failed to send orki: %s", ex)
+            self.tg_bot.send_message(callback.message.chat.id, f"{self.site_parser.get_orki()}")
+
+
+
     def send_main_menu(self, message):
         self.tg_bot.send_message(message.chat.id, "Головне меню", reply_markup=self.button.get_inline_buttons())
         self.tg_bot.delete_message(message.chat.id, message.message_id)
@@ -95,8 +121,6 @@ class MessageHandler:
         except Exception as ex:
             logging.error("Failed to send about us: %s", ex)
             self.tg_bot.send_message(message.chat.id, text=f"Помилка в бд {ex}")
-
-
 
     def send_vending_menu(self, message):
         self.tg_bot.send_message(message.chat.id, "Вендінг", reply_markup=self.button.get_inline_buttons_vending())

@@ -32,3 +32,132 @@
 2024-10-16 21:45:17,304 - INFO - Exchange rates sent to user 1475149178
 2024-10-16 21:45:18,621 - INFO - Weather info sent to user 1475149178
 2024-10-16 21:47:05,679 - ERROR - Failed to send NASA image: 'InvalidSchema' object is not subscriptable
+2024-10-18 22:34:27,197 - INFO - Main menu sent to user 1475149178
+2024-10-18 22:34:28,386 - INFO - Exchange rates sent to user 1475149178
+2024-10-18 22:34:29,480 - INFO - Weather info sent to user 1475149178
+2024-10-18 22:34:30,638 - INFO - Vending menu shown to user 1475149178
+2024-10-18 22:34:31,756 - INFO - Bianchi link sent to user 1475149178
+2024-10-18 22:34:32,810 - INFO - Main menu shown to user 1475149178
+2024-10-18 22:34:33,746 - ERROR - Failed to send NASA image: 'InvalidSchema' object is not subscriptable
+2024-10-18 22:34:56,969 - INFO - Main menu sent to user 1475149178
+2024-10-18 22:34:58,973 - INFO - NASA image sent to user 1475149178
+2024-10-18 22:35:19,664 - ERROR - Failed to send about us: 'Base' object has no attribute 'get_datadb'
+2024-10-18 22:41:51,132 - INFO - Contact processed
+2024-10-18 22:41:56,041 - INFO - Main menu sent to user 1475149178
+2024-10-18 22:41:57,453 - INFO - NASA image sent to user 1475149178
+2024-10-18 23:28:28,476 - INFO - Main menu sent to user 1475149178
+2024-10-18 23:28:30,458 - INFO - Exchange rates sent to user 1475149178
+2024-10-18 23:28:33,759 - INFO - Weather info sent to user 1475149178
+2024-10-18 23:28:35,855 - INFO - Vending menu shown to user 1475149178
+2024-10-18 23:28:37,190 - INFO - Main menu shown to user 1475149178
+2024-10-18 23:28:38,466 - INFO - Vending menu shown to user 1475149178
+2024-10-18 23:28:39,102 - INFO - Main menu shown to user 1475149178
+2024-10-18 23:28:39,779 - INFO - Vending menu shown to user 1475149178
+2024-10-18 23:28:41,238 - INFO - Main menu shown to user 1475149178
+2024-10-18 23:28:41,947 - INFO - Vending menu shown to user 1475149178
+2024-10-18 23:28:42,670 - INFO - Main menu shown to user 1475149178
+2024-10-18 23:28:43,533 - INFO - Vending menu shown to user 1475149178
+2024-10-18 23:28:44,721 - INFO - Main menu shown to user 1475149178
+2024-10-18 23:28:48,931 - INFO - Vending menu shown to user 1475149178
+2024-10-18 23:28:56,955 - INFO - Main menu shown to user 1475149178
+2024-10-18 23:29:01,073 - INFO - NASA image sent to user 1475149178
+2024-10-18 23:29:14,502 - ERROR - Failed to send about us: 'Base' object has no attribute 'get_datadb'
+2024-10-18 23:29:30,878 - INFO - Contact processed
+2024-10-18 23:29:44,062 - INFO - Main menu sent to user 1475149178
+2024-10-18 23:29:45,968 - ERROR - Failed to send about us: 'Base' object has no attribute 'get_datadb'
+2024-10-20 20:32:29,355 - INFO - Start menu sent to user 1475149178
+2024-10-20 20:32:30,781 - INFO - Main menu sent to user 1475149178
+2024-10-20 20:32:32,251 - INFO - Orki sent to user 1475149178
+2024-10-20 20:33:26,659 - INFO - Main menu sent to user 1475149178
+2024-10-20 20:33:27,897 - INFO - Orki sent to user 1475149178
+2024-10-20 20:33:30,993 - INFO - Main menu sent to user 1475149178
+2024-10-20 20:33:32,109 - INFO - Orki sent to user 1475149178
+2024-10-20 20:34:00,420 - INFO - Main menu sent to user 1475149178
+2024-10-20 20:34:01,971 - INFO - Orki sent to user 1475149178
+2024-10-20 20:35:45,422 - INFO - Main menu sent to user 1475149178
+2024-10-20 20:35:46,606 - INFO - Orki sent to user 1475149178
+2024-10-20 20:37:42,925 - INFO - Main menu sent to user 1475149178
+2024-10-20 20:37:44,175 - INFO - Orki sent to user 1475149178
+2024-10-20 20:40:53,755 - INFO - Main menu sent to user 1475149178
+2024-10-20 20:40:54,981 - INFO - Orki sent to user 1475149178
+2024-10-20 20:41:42,717 - INFO - Main menu sent to user 1475149178
+2024-10-20 20:41:46,012 - INFO - Orki sent to user 1475149178
+2024-10-20 20:41:48,137 - INFO - Main menu sent to user 1475149178
+2024-10-20 20:41:49,521 - INFO - Orki sent to user 1475149178
+2024-10-20 20:41:52,316 - INFO - Main menu sent to user 1475149178
+2024-10-20 20:41:53,577 - INFO - Orki sent to user 1475149178
+2024-10-20 22:09:57,993 - INFO - Main menu sent to user 1475149178
+2024-10-20 22:10:00,078 - INFO - NASA image sent to user 1475149178
+2024-10-21 12:16:52,967 - INFO - Main menu sent to user 1475149178
+2024-10-21 12:16:54,172 - INFO - Orki sent to user 1475149178
+2024-10-21 14:42:36,588 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:42:38,875 - INFO - Orki sent to user 1475149178
+2024-10-21 14:42:40,005 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:42:41,469 - INFO - Price Iphone sent to user 1475149178
+2024-10-21 14:43:46,733 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:43:47,985 - ERROR - Failed to send Price Iphone: No connection adapters were found for '1https://estore.ua/iphone-15-128gb-green/'
+2024-10-21 14:45:39,917 - INFO - Price Iphone sent to user 1475149178
+2024-10-21 14:45:54,575 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:45:56,124 - INFO - Price Iphone sent to user 1475149178
+2024-10-21 14:45:58,215 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:45:59,573 - INFO - Orki sent to user 1475149178
+2024-10-21 14:46:01,604 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:46:03,148 - INFO - Exchange rates sent to user 1475149178
+2024-10-21 14:46:05,043 - INFO - Weather info sent to user 1475149178
+2024-10-21 14:46:07,228 - INFO - Vending menu shown to user 1475149178
+2024-10-21 14:46:08,442 - INFO - Main menu shown to user 1475149178
+2024-10-21 14:46:09,695 - INFO - Vending menu shown to user 1475149178
+2024-10-21 14:46:10,352 - INFO - Main menu shown to user 1475149178
+2024-10-21 14:46:11,030 - INFO - Vending menu shown to user 1475149178
+2024-10-21 14:46:11,621 - INFO - Main menu shown to user 1475149178
+2024-10-21 14:46:16,797 - INFO - NASA image sent to user 1475149178
+2024-10-21 14:46:25,756 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:46:27,866 - INFO - Exchange rates sent to user 1475149178
+2024-10-21 14:59:04,552 - INFO - Start menu sent to user 1475149178
+2024-10-21 14:59:06,548 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:59:08,413 - INFO - Exchange rates sent to user 1475149178
+2024-10-21 14:59:10,033 - INFO - Weather info sent to user 1475149178
+2024-10-21 14:59:11,509 - INFO - Vending menu shown to user 1475149178
+2024-10-21 14:59:13,001 - INFO - Main menu shown to user 1475149178
+2024-10-21 14:59:13,803 - INFO - Vending menu shown to user 1475149178
+2024-10-21 14:59:14,706 - INFO - Bianchi link sent to user 1475149178
+2024-10-21 14:59:21,609 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:59:24,117 - INFO - Orki sent to user 1475149178
+2024-10-21 14:59:26,610 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:59:28,605 - INFO - NASA image sent to user 1475149178
+2024-10-21 14:59:31,243 - INFO - Main menu sent to user 1475149178
+2024-10-21 14:59:34,092 - INFO - Price Iphone sent to user 1475149178
+2024-10-21 14:59:36,639 - ERROR - Failed to send about us: 'Base' object has no attribute 'get_datadb'
+2024-10-21 14:59:41,428 - INFO - Contact processed
+2024-10-21 15:02:50,697 - INFO - Start menu sent to user 1475149178
+2024-10-21 15:02:53,620 - INFO - Main menu sent to user 1475149178
+2024-10-21 15:02:55,574 - INFO - Exchange rates sent to user 1475149178
+2024-10-21 15:02:57,838 - INFO - Weather info sent to user 1475149178
+2024-10-21 15:03:00,087 - INFO - Vending menu shown to user 1475149178
+2024-10-21 15:03:01,344 - INFO - Main menu shown to user 1475149178
+2024-10-21 15:03:02,253 - INFO - Vending menu shown to user 1475149178
+2024-10-21 15:03:04,160 - INFO - Bianchi link sent to user 1475149178
+2024-10-21 15:03:10,601 - INFO - Main menu sent to user 1475149178
+2024-10-21 15:03:12,872 - INFO - NASA image sent to user 1475149178
+2024-10-21 15:03:16,202 - INFO - Main menu sent to user 1475149178
+2024-10-21 15:03:18,148 - INFO - Orki sent to user 1475149178
+2024-10-21 15:03:21,098 - INFO - Main menu sent to user 1475149178
+2024-10-21 15:03:22,744 - INFO - Price Iphone sent to user 1475149178
+2024-10-21 15:03:26,886 - ERROR - Failed to send about us: 'Base' object has no attribute 'get_datadb'
+2024-10-21 15:03:30,040 - INFO - Contact processed
+2024-10-21 15:06:03,057 - INFO - Start menu sent to user 1475149178
+2024-10-21 15:06:04,831 - INFO - Main menu sent to user 1475149178
+2024-10-21 15:06:06,529 - INFO - Exchange rates sent to user 1475149178
+2024-10-21 15:06:09,128 - INFO - Weather info sent to user 1475149178
+2024-10-21 15:06:12,062 - INFO - Vending menu shown to user 1475149178
+2024-10-21 15:06:13,551 - INFO - Main menu shown to user 1475149178
+2024-10-21 15:06:14,542 - INFO - Vending menu shown to user 1475149178
+2024-10-21 15:06:15,380 - INFO - Bianchi link sent to user 1475149178
+2024-10-21 15:06:21,436 - INFO - Main menu sent to user 1475149178
+2024-10-21 15:06:23,752 - INFO - NASA image sent to user 1475149178
+2024-10-21 15:06:25,989 - INFO - Main menu sent to user 1475149178
+2024-10-21 15:06:28,029 - INFO - Orki sent to user 1475149178
+2024-10-21 15:06:31,356 - INFO - Main menu sent to user 1475149178
+2024-10-21 15:06:33,896 - INFO - Price Iphone sent to user 1475149178
+2024-10-21 15:06:49,915 - ERROR - Failed to send about us: 'Base' object has no attribute 'get_datadb'
+2024-10-21 15:06:54,123 - INFO - Contact processed
