@@ -13,6 +13,8 @@ class Button:
         self.weather = "Погода"
         self.images_nasa = "Зображення"
         self.orki = "Орки"
+        self.iphone = "Iphone"
+        self.films = "Films"
 
     def get_inline_buttons(self) -> types.InlineKeyboardMarkup:
         buttons = [
@@ -21,7 +23,8 @@ class Button:
             types.InlineKeyboardButton(self.vending_machines, callback_data='vending'),
             types.InlineKeyboardButton(self.images_nasa, callback_data='image'),
             types.InlineKeyboardButton(self.orki, callback_data='orki'),
-            types.InlineKeyboardButton("Iphone", callback_data='iphone')
+            types.InlineKeyboardButton(self.iphone, callback_data='iphone'),
+            types.InlineKeyboardButton(self.films, callback_data='films'),
         ]
         return types.InlineKeyboardMarkup(row_width=2).add(*buttons)
 

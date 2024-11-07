@@ -37,7 +37,7 @@ class MessageHandler:
             self.send_main_menu(message)
         elif message.text == self.button.about_us:
             self.send_about_us(message)
-        elif message.text == self.button.vendingMashins:
+        elif message.text == self.button.vending_machines:
             self.send_vending_menu(message)
 
     def handle_callback(self, callback):
@@ -50,6 +50,7 @@ class MessageHandler:
             'bianchi': self.send_bianchi_link,
             'orki':self.send_orki,
             'iphone': self.send_price_iphone,
+            'films': self.send_top_films,
         }
         handler = handlers.get(callback.data, self.handle_unknown_callback)
         handler(callback)
@@ -58,9 +59,18 @@ class MessageHandler:
         self.send_start_menu(message)
 
     def test_command(self, message):
+        self.tg_bot.send_message(message.chat.id,text=self.site_parser.get_all_iphone_on_page("https://estore.ua/smartfony/manufacturer:apple/page=2")[0])
         if not self.initialize_database(message):
-
             return
+
+    def send_top_films(self, callback):
+        try:
+            self.tg_bot.send_message(callback.message.chat.id, text=self.site_parser.get_top_films())
+            self.tg_bot.delete_message(callback.message.chat.id, callback.message.message_id)
+            logging.info("Top films sent to user %s", callback.message.chat.id)
+        except Exception as ex:
+            logging.error("Failed to send Top films: %s", ex)
+            self.tg_bot.send_message(callback.message.chat.id, f"{self.site_parser.get_top_films()}")
 
     def handle_contact(self, message):
         if message.contact:
@@ -97,9 +107,11 @@ class MessageHandler:
             self.tg_bot.send_message(callback.message.chat.id, f"{self.site_parser.get_price_iphone15()}")
 
     def send_orki(self, callback):
+        self.site_parser.get_top_films()
         try:
             self.tg_bot.send_message(callback.message.chat.id, text=self.site_parser.get_orki())
             self.tg_bot.delete_message(callback.message.chat.id, callback.message.message_id)
+
             logging.info("Orki sent to user %s", callback.message.chat.id)
         except Exception as ex:
             logging.error("Failed to send orki: %s", ex)
@@ -114,8 +126,7 @@ class MessageHandler:
 
     def send_about_us(self, message):
         try:
-            self.base.get_datadb()
-            self.tg_bot.send_message(message.chat.id, text=self.base.name)
+
             self.tg_bot.delete_message(message.chat.id, message.message_id)
             logging.info("About us sent to user %s", message.chat.id)
         except Exception as ex:

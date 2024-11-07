@@ -161,3 +161,180 @@
 2024-10-21 15:06:33,896 - INFO - Price Iphone sent to user 1475149178
 2024-10-21 15:06:49,915 - ERROR - Failed to send about us: 'Base' object has no attribute 'get_datadb'
 2024-10-21 15:06:54,123 - INFO - Contact processed
+2024-10-24 18:04:42,114 - INFO - Main menu sent to user 1475149178
+2024-10-24 18:26:50,044 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: text must be non-empty
+2024-10-24 18:26:50,045 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\__init__.py", line 8945, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\PycharmProjects\TelegramPresentation_Bot\Bot\messageHandler.py", line 63, in test_command
+    self.tg_bot.send_message(message.chat.id,text=iphone)
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\__init__.py", line 1775, in send_message
+    apihelper.send_message(
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\apihelper.py", line 273, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: text must be non-empty
+
+2024-10-24 18:28:56,673 - INFO - Database initialized successfully.
+2024-10-24 20:16:20,656 - INFO - Database initialized successfully.
+2024-10-24 20:18:09,285 - INFO - Database initialized successfully.
+2024-10-24 20:19:40,829 - INFO - Database initialized successfully.
+2024-10-24 20:20:04,151 - INFO - Database initialized successfully.
+2024-11-03 19:02:03,046 - INFO - Main menu sent to user 1475149178
+2024-11-04 11:00:08,098 - INFO - Main menu sent to user 1475149178
+2024-11-05 21:40:04,527 - INFO - Main menu sent to user 1475149178
+2024-11-05 21:40:06,327 - INFO - Orki sent to user 1475149178
+2024-11-05 21:40:40,643 - INFO - Main menu sent to user 1475149178
+2024-11-05 21:40:43,442 - INFO - Orki sent to user 1475149178
+2024-11-05 21:41:02,474 - INFO - Main menu sent to user 1475149178
+2024-11-05 21:41:05,244 - INFO - Price Iphone sent to user 1475149178
+2024-11-05 21:45:46,576 - INFO - Main menu sent to user 1475149178
+2024-11-05 21:45:48,751 - INFO - Orki sent to user 1475149178
+2024-11-05 21:49:29,381 - INFO - Main menu sent to user 1475149178
+2024-11-05 21:49:31,313 - INFO - Orki sent to user 1475149178
+2024-11-05 21:54:59,098 - INFO - Main menu sent to user 1475149178
+2024-11-05 21:55:01,889 - ERROR - Failed to send orki: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 21:57:20,769 - INFO - Main menu sent to user 1475149178
+2024-11-05 21:57:22,984 - INFO - Orki sent to user 1475149178
+2024-11-05 22:00:30,094 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:00:32,203 - INFO - Orki sent to user 1475149178
+2024-11-05 22:00:53,203 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:00:54,837 - ERROR - Failed to send orki: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:04:45,405 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:04:47,380 - ERROR - Failed to send orki: Page id "https://ru.wikipedia.org/wiki/250_%D0%BB%D1%83%D1%87%D1%88%D0%B8%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2_%D0%BF%D0%BE_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8_IMDb" does not match any pages. Try another id!
+2024-11-05 22:06:07,115 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:06:08,912 - ERROR - Failed to send orki: Page id "https://ru.wikipedia.org/wiki/250_%D0%BB%D1%83%D1%87%D1%88%D0%B8%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2_%D0%BF%D0%BE_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8_IMDb" does not match any pages. Try another id!
+2024-11-05 22:06:23,465 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:06:25,204 - ERROR - Failed to send orki: Page id "https://ru.wikipedia.org/wiki/250_%D0%BB%D1%83%D1%87%D1%88%D0%B8%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2_%D0%BF%D0%BE_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8_IMDb" does not match any pages. Try another id!
+2024-11-05 22:07:05,785 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:07:08,225 - ERROR - Failed to send orki: Page id "https://ru.wikipedia.org/wiki/250_%D0%BB%D1%83%D1%87%D1%88%D0%B8%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2_%D0%BF%D0%BE_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8_IMDb" does not match any pages. Try another id!
+2024-11-05 22:07:36,483 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:07:38,276 - ERROR - Failed to send orki: Page id "https://ru.wikipedia.org/wiki/250_%D0%BB%D1%83%D1%87%D1%88%D0%B8%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2_%D0%BF%D0%BE_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8_IMDb" does not match any pages. Try another id!
+2024-11-05 22:08:17,624 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:08:19,794 - INFO - Orki sent to user 1475149178
+2024-11-05 22:09:17,673 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:09:20,197 - INFO - Orki sent to user 1475149178
+2024-11-05 22:10:14,895 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:10:17,538 - INFO - Orki sent to user 1475149178
+2024-11-05 22:11:27,696 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:11:30,132 - ERROR - Failed to send orki: 'coordinates'
+2024-11-05 22:15:32,391 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:15:33,587 - ERROR - Failed to send orki: Please, be nice to Wikipedia and specify user agent - https://meta.wikimedia.org/wiki/User-Agent_policy. Current user_agent: 'ru' is not sufficient.
+2024-11-05 22:16:32,855 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:20:32,193 - INFO - Wikipedia: language=en, user_agent: YourAppName/1.0 (idmitrashko@ukr.net) (Wikipedia-API/0.7.1; https://github.com/martin-majlis/Wikipedia-API/), extract_format=1
+2024-11-05 22:20:32,193 - INFO - Request URL: https://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=250 лучших фильмов по версии IMDb&explaintext=1&exsectionformat=wiki
+2024-11-05 22:20:33,024 - INFO - Orki sent to user 1475149178
+2024-11-05 22:21:39,267 - INFO - Wikipedia: language=en, user_agent: YourAppName/1.0 (idmitrashko@ukr.net) (Wikipedia-API/0.7.1; https://github.com/martin-majlis/Wikipedia-API/), extract_format=1
+2024-11-05 22:21:39,268 - INFO - Request URL: https://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=250 лучших фильмов по версии IMDb&explaintext=1&exsectionformat=wiki
+2024-11-05 22:21:39,799 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:21:50,472 - INFO - Wikipedia: language=en, user_agent: YourAppName/1.0 (idmitrashko@ukr.net) (Wikipedia-API/0.7.1; https://github.com/martin-majlis/Wikipedia-API/), extract_format=1
+2024-11-05 22:21:50,472 - INFO - Request URL: https://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=250 лучших фильмов по версии IMDb&explaintext=1&exsectionformat=wiki
+2024-11-05 22:21:50,911 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:24:24,714 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:24:57,411 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:29:46,920 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:30:42,607 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:31:37,160 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:33:26,320 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:34:25,063 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:36:41,491 - INFO - About us sent to user 1475149178
+2024-11-05 22:38:43,497 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:39:17,760 - INFO - Main menu sent to user 1475149178
+2024-11-05 22:39:19,790 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:40:18,300 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. The server returned HTTP 414 Request-URI Too Large. Response body:
+[b'<html>\r\n<head><title>414 Request-URI Too Large</title></head>\r\n<body>\r\n<center><h1>414 Request-URI Too Large</h1></center>\r\n<hr><center>nginx/1.18.0</center>\r\n</body>\r\n</html>\r\n']
+2024-11-05 22:40:42,048 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:43:00,797 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:45:11,793 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:46:09,707 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:46:55,649 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:48:00,574 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:49:36,387 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:50:19,669 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:50:49,484 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:51:55,255 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:53:56,364 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 22:55:31,779 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 23:01:37,939 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 23:03:11,663 - ERROR - Failed to send about us: cannot access local variable 'film' where it is not associated with a value
+2024-11-05 23:03:52,066 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 23:05:14,343 - ERROR - Failed to send about us: cannot access local variable 'film' where it is not associated with a value
+2024-11-05 23:05:30,023 - ERROR - Failed to send about us: cannot access local variable 'film' where it is not associated with a value
+2024-11-05 23:07:52,446 - ERROR - Failed to send about us: sequence item 1: expected str instance, Tag found
+2024-11-05 23:09:34,133 - ERROR - Failed to send about us: can only join an iterable
+2024-11-05 23:13:07,090 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 23:13:42,349 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 23:14:48,568 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 23:15:32,038 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 23:15:49,606 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 23:16:15,806 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 23:16:31,622 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2024-11-05 23:16:54,289 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2024-11-05 23:17:26,620 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2024-11-05 23:17:44,576 - INFO - About us sent to user 1475149178
+2024-11-05 23:18:00,913 - INFO - About us sent to user 1475149178
+2024-11-07 01:54:25,042 - INFO - Start menu sent to user 1475149178
+2024-11-07 01:54:26,552 - INFO - Main menu sent to user 1475149178
+2024-11-07 01:54:30,051 - INFO - NASA image sent to user 1475149178
+2024-11-07 01:54:33,071 - INFO - Price Iphone sent to user 1475149178
+2024-11-07 02:01:26,124 - INFO - Main menu sent to user 1475149178
+2024-11-07 02:01:27,381 - ERROR - Failed to send Top films: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2024-11-07 02:01:27,757 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2024-11-07 02:01:27,758 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\user\PycharmProjects\TelegramPresentation_Bot\Bot\messageHandler.py", line 68, in send_top_films
+    self.tg_bot.send_message(callback.message.chat.id, text=self.site_parser.get_top_films())
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\__init__.py", line 1775, in send_message
+    apihelper.send_message(
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\apihelper.py", line 273, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\__init__.py", line 8945, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\PycharmProjects\TelegramPresentation_Bot\Bot\messageHandler.py", line 56, in handle_callback
+    handler(callback)
+  File "C:\Users\user\PycharmProjects\TelegramPresentation_Bot\Bot\messageHandler.py", line 73, in send_top_films
+    self.tg_bot.send_message(callback.message.chat.id, f"{self.site_parser.get_top_films()}")
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\__init__.py", line 1775, in send_message
+    apihelper.send_message(
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\apihelper.py", line 273, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\PycharmProjects\pythonProject\.venv\Lib\site-packages\telebot\apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+
+2024-11-07 02:02:36,066 - INFO - Top films sent to user 1475149178
