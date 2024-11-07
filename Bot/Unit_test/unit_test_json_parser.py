@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import patch
 
 import requests
-from jsonParser import JsonParser
+from Bot.Parser.jsonParser import JsonParser
 
 
 class TestJsonParser(unittest.TestCase):

@@ -1,5 +1,5 @@
 import requests
-import config
+from Bot.Model import config
 
 class JsonParser:
     def __init__(self, city='Kyiv'):

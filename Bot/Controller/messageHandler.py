@@ -1,16 +1,14 @@
-import base
-import bot
-import button
-import config
-import disposable_mail
-import jsonParser
+from Bot.Controller import base, disposable_mail
+from Bot.Telegram import bot, button
+from Bot.Model import config
+from Bot.Parser import jsonParser, siteParser
 import logging
-import siteParser
 
 bot = bot.Bot(config.BOT_TOKEN)
 disposable_mail = disposable_mail.Disposable_mail()
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',handlers=[logging.FileHandler("tg_bot.log"), logging.StreamHandler()])
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[logging.FileHandler(
+    "../tg_bot.log"), logging.StreamHandler()])
 
 class MessageHandler:
 

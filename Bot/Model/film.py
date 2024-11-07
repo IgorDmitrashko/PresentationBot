@@ -7,7 +7,7 @@ class Film:
         self.director = director
         self.genre = genre
 
-    def __str__(self):
+    def __str__(self) -> str:
         return (f"Рейтинг: {self.rating}\n"
                 f"Название: {self.name}\n"
                 f"Год: {self.ears}\n"

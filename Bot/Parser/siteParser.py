@@ -1,9 +1,8 @@
 import requests
 import asyncio
 import aiohttp
-import film
-import  wikipediaapi
 
+from Bot.Model import film
 from bs4 import BeautifulSoup
 
 

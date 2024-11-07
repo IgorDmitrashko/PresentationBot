@@ -1,4 +1,4 @@
-import config
+from Bot.Model import config
 
 from telebot import TeleBot
 
