@@ -15,3 +15,19 @@
 2024-11-07 21:39:20,923 - INFO - About us sent to user 1475149178
 2024-11-07 21:39:22,979 - INFO - About us sent to user 1475149178
 2024-11-07 21:39:25,253 - INFO - Contact processed
+2024-11-11 23:02:33,499 - INFO - About us sent to user 1475149178
+2024-11-11 23:03:22,354 - INFO - About us sent to user 1475149178
+2024-11-11 23:04:11,777 - INFO - About us sent to user 1475149178
+2024-11-11 23:04:46,092 - INFO - About us sent to user 1475149178
+2024-11-11 23:05:23,308 - INFO - About us sent to user 1475149178
+2024-11-11 23:05:57,426 - INFO - About us sent to user 1475149178
+2024-11-11 23:06:31,700 - INFO - About us sent to user 1475149178
+2024-11-12 01:53:40,216 - ERROR - Failed to send about us: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
+2024-11-12 01:56:08,345 - INFO - About us sent to user 1475149178
+2024-11-12 01:58:04,207 - INFO - About us sent to user 1475149178
+2024-11-12 01:59:53,878 - INFO - About us sent to user 1475149178
+2024-11-12 02:00:26,674 - INFO - About us sent to user 1475149178
+2024-11-12 02:01:49,332 - INFO - About us sent to user 1475149178
+2024-11-12 15:48:51,083 - INFO - About us sent to user 1475149178
+2024-11-12 15:50:40,769 - INFO - About us sent to user 1475149178
+2024-11-12 15:51:32,854 - INFO - About us sent to user 1475149178

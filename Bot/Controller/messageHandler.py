@@ -123,8 +123,9 @@ class MessageHandler:
         logging.info("Main menu sent to user %s", message.chat.id)
 
     def send_about_us(self, message):
-        try:
 
+        try:
+            self.tg_bot.send_message(message.chat.id, text=self.site_parser.get_videocards())
             self.tg_bot.delete_message(message.chat.id, message.message_id)
             logging.info("About us sent to user %s", message.chat.id)
         except Exception as ex:

@@ -1,8 +1,9 @@
 import requests
 import asyncio
 import aiohttp
+import re
 
-from Bot.Model import film
+from Bot.Model import film, videocard
 from bs4 import BeautifulSoup
 
 
@@ -11,7 +12,8 @@ class SiteParser:
         'orki': 'https://index.minfin.com.ua/russian-invading/casualties/',
         'alarm': 'https://map.ukrainealarm.com/',
         'estore': 'https://estore.ua/iphone-15-128gb-green/',
-        'films': 'https://ru.wikipedia.org/wiki/250_%D0%BB%D1%83%D1%87%D1%88%D0%B8%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2_%D0%BF%D0%BE_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8_IMDb'
+        'films': 'https://ru.wikipedia.org/wiki/250_%D0%BB%D1%83%D1%87%D1%88%D0%B8%D1%85_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B2_%D0%BF%D0%BE_%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8_IMDb',
+        'razetka': 'https://hard.rozetka.com.ua/videocards/c80087/'
     }
 
     page_num = 1
@@ -20,8 +22,8 @@ class SiteParser:
 
     def __init__(self):
         self.base_url = "https://estore.ua/smartfony/manufacturer:apple/page={}"
-        #result = asyncio.run(self.get_all_pages())
-        #print(result)
+        self.get_videocards()
+
 
     def __get_response(self, url):
         try:
@@ -39,9 +41,42 @@ class SiteParser:
         try:
             soup = self.__get_soup(self.URLS['orki'])
             titles = soup.find(class_='casualties').find_all('li')
+            for element in titles:
+                print(element.get_text())
             return "\n".join(element.get_text() for element in titles)
         except Exception as ex:
             return f"О{ex}"
+
+    def get_videocards(self):
+
+        soup = self.__get_soup(self.URLS['razetka'])
+        titles = soup.find(class_='catalog-grid ng-star-inserted').find_all('li')
+        videocards = []
+        result_string = ""
+
+        pattern = re.compile(
+            r"(\d+)\s+Відеокарта\s+(.+?)\s+(\d+GB)\s+GDDR(\d+)\s+\(\d+bit\)\s+\((\d+)/(\d+)\)\s+.*\s+([\d\s\u00A0]+₴)"
+        )
+
+        for title in titles[0:10]:
+            data_text = title.get_text()
+            data_text = data_text.replace('\u00A0', '')
+
+            match = pattern.search(data_text)
+            if match:
+                id = match.group(1)
+                name = match.group(2)
+                memory = match.group(3)
+                memory_type = f"GDDR{match.group(4)}"
+                core = match.group(5)
+                frequency = match.group(6)
+                price = match.group(7)
+
+                videocar = videocard.Videocard(id=id, name=name, price=price, memory=memory, core=core, frequency=frequency,
+                                      memory_type=memory_type)
+                videocards.append(videocar)
+                result_string += f"\n{videocar.__str__()}\n"
+        return result_string
 
     def get_top_films(self):
         try:
@@ -51,9 +86,8 @@ class SiteParser:
             titles = soup.find_all('tr')
             result_string = ""
             for element in titles[1:21]:
-                # Разделение данных на части
-                parts = element.get_text().split("\n")  # Предполагаем, что каждый элемент разделён новой строкой
-                if len(parts) >= 5:  # Если данных достаточно
+                parts = element.get_text().split("\n")
+                if len(parts) >= 5:
                     films = film.Film(parts[1], parts[2], parts[3], parts[4], parts[5])
                     result_string += f"\n{films.__str__()}\n"
                 else:
@@ -62,9 +96,6 @@ class SiteParser:
             return result_string
         except Exception as ex:
             return f"{ex}"
-
-
-
 
     def get_price_iphone15(self) -> str:
         try:
@@ -89,7 +120,6 @@ class SiteParser:
                         url = self.base_url.format(page)
                         print(page)
                         tasks.append(self.get_all_iphone_on_page(url))
-                        # Здесь вызываем get_all_iphone_on_page
                         print(tasks[page-1])
                     else:
                         break
@@ -97,7 +127,6 @@ class SiteParser:
                 return tasks
         except Exception as ex:
             return ex
-
 
     def get_all_iphone_on_page(self, url) ->[]:
         soup = self.__get_soup(url)
@@ -108,13 +137,11 @@ class SiteParser:
 
         for item in items:
             product = {}
-            # Название товара
             name_tag = item.find("div", class_="product-name")
             if name_tag and name_tag.find("a"):
                 product["name"] = name_tag.find("a").text.strip()
                 product["url"] = name_tag.find("a")["href"]
 
-            # Цена товара
             price_tag = item.find("span", class_="price")
             not_nalichie = item.find("span", class_="actions clearer")
 
@@ -128,7 +155,6 @@ class SiteParser:
         return product_list
 
 class Product:
-
     name = ''
     price = ''
     url = ''
