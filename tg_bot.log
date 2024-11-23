@@ -31,3 +31,19 @@
 2024-11-12 15:48:51,083 - INFO - About us sent to user 1475149178
 2024-11-12 15:50:40,769 - INFO - About us sent to user 1475149178
 2024-11-12 15:51:32,854 - INFO - About us sent to user 1475149178
+2024-11-19 20:17:42,630 - INFO - Main menu sent to user 1475149178
+2024-11-19 20:17:45,308 - INFO - Price Iphone sent to user 1475149178
+2024-11-19 20:18:12,612 - INFO - Main menu sent to user 1475149178
+2024-11-19 20:18:16,624 - INFO - Orki sent to user 1475149178
+2024-11-23 17:30:52,256 - INFO - Main menu sent to user 1475149178
+2024-11-23 17:30:56,085 - INFO - Price Iphone sent to user 1475149178
+2024-11-23 19:13:12,812 - INFO - About us sent to user 1475149178
+2024-11-23 19:14:46,107 - INFO - About us sent to user 1475149178
+2024-11-23 19:16:20,244 - INFO - About us sent to user 1475149178
+2024-11-23 19:16:43,741 - INFO - About us sent to user 1475149178
+2024-11-23 19:18:33,905 - INFO - About us sent to user 1475149178
+2024-11-23 19:19:32,118 - INFO - About us sent to user 1475149178
+2024-11-23 19:24:01,485 - INFO - About us sent to user 1475149178
+2024-11-23 19:24:02,530 - ERROR - Failed to send about us: 'NoneType' object has no attribute 'find_all'
+2024-11-23 19:25:34,490 - INFO - About us sent to user 1475149178
+2024-11-23 19:29:15,591 - INFO - About us sent to user 1475149178

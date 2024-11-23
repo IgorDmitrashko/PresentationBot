@@ -338,3 +338,12 @@ Traceback (most recent call last):
 telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is too long
 
 2024-11-07 02:02:36,066 - INFO - Top films sent to user 1475149178
+2024-11-23 19:05:58,068 - INFO - About us sent to user 1475149178
+2024-11-23 19:05:58,396 - ERROR - Failed to send about us: 'NoneType' object has no attribute 'find_all'
+2024-11-23 19:06:05,912 - INFO - About us sent to user 1475149178
+2024-11-23 19:06:06,343 - ERROR - Failed to send about us: 'NoneType' object has no attribute 'find_all'
+2024-11-23 19:07:31,234 - INFO - About us sent to user 1475149178
+2024-11-23 19:09:09,627 - ERROR - Failed to send about us: 'Message' object has no attribute 'chat_id'
+2024-11-23 19:10:17,909 - INFO - About us sent to user 1475149178
+2024-11-23 19:10:18,855 - ERROR - Failed to send about us: 'Message' object has no attribute 'chat_id'
+2024-11-23 19:12:20,651 - INFO - About us sent to user 1475149178

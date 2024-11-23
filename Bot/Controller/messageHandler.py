@@ -1,7 +1,10 @@
-from Bot.Controller import base, disposable_mail
+from fileinput import filename
+
+from Bot.Controller import base, disposable_mail, excel_table_creator
+from Bot.Model.modelSiteParser import ModelSiteParser
 from Bot.Telegram import bot, button
 from Bot.Model import config
-from Bot.Parser import jsonParser, siteParser
+from Bot.Parser import jsonParser, siteParser, internetMagazinParser
 import logging
 
 bot = bot.Bot(config.BOT_TOKEN)
@@ -19,6 +22,8 @@ class MessageHandler:
         self.button = button.Button()
         self.disposable_mail = disposable_mail
         self.site_parser = siteParser.SiteParser()
+        self.internet_magazin_parser = internetMagazinParser.InternetMagazinParser()
+        self.excel_table = excel_table_creator.ExcelTableCreator(filename= "data.xlsx")
         self.commands_handler()
 
     def commands_handler(self):
@@ -125,9 +130,22 @@ class MessageHandler:
     def send_about_us(self, message):
 
         try:
-            self.tg_bot.send_message(message.chat.id, text=self.site_parser.get_videocards())
-            self.tg_bot.delete_message(message.chat.id, message.message_id)
+            #self.tg_bot.send_message(message.chat.id, text=self.site_parser.get_videocards())
+            #self.tg_bot.delete_message(message.chat.id, message.message_id)
             logging.info("About us sent to user %s", message.chat.id)
+
+            modelsite_yabko = ModelSiteParser(catalog=config.classes_yabko['catalog'],
+                                              item=config.classes_yabko['item'],
+                                              product_name=config.classes_yabko['product_name'],
+                                              special_price=config.classes_yabko['special_price'],
+                                              old_price=config.classes_yabko['old_price'])
+
+            self.excel_table.write_to_excel(self.internet_magazin_parser
+                                            .get_all_smartphone(
+                                base_url_site=self.internet_magazin_parser.base_url_yabko,
+                                model_sit_parser=modelsite_yabko))
+            with open("data.xlsx", 'rb') as file:
+                self.tg_bot.send_document(message.chat.id, file, caption="Файл готов!")
         except Exception as ex:
             logging.error("Failed to send about us: %s", ex)
             self.tg_bot.send_message(message.chat.id, text=f"Помилка в бд {ex}")

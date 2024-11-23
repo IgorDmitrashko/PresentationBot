@@ -6,3 +6,20 @@ host = "localhost"
 user = "root"
 password = "password"
 db_name = "mydb"
+
+
+classes_yabko = {
+    'catalog': 'product_catalog_',
+    'item': 'catalog-product-item',
+    'product_name': 'catalog-product-item--title',
+    'special_price': 'current',
+    'old_price': 'old'
+}
+
+classes_eStore = {
+    'catalog': 'products-grid category-products-grid itemgrid itemgrid-adaptive itemgrid-2col single-line-name centered',
+    'item': 'item',
+    'product_name': 'product-name',
+    'special_price': 'special-price',
+    'old_price': 'old-price'
+}

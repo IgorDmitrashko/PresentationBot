@@ -17,4 +17,10 @@ class Videocard:
                 f"Память: {self.memory}\n" 
                 f"Количество ядер: {self.core}\n" 
                 f"Частота: {self.frequency}\n" 
-                f"Тип памяти: {self.memory_type}")
+                f"Тип памяти: {self.memory_type}\n")
+
+    def get_headers(self):
+        return ["ID", "Название", "Цена", "Память", "Количество ядер", "Частота", "Тип памяти"]
+
+    def get_data(self):
+        return [self.id, self.name, self.price, self.memory, self.core, self.frequency, self.memory_type]
