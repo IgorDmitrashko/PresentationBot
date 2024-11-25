@@ -21,6 +21,13 @@ class ExcelTableCreator:
         self.workbook.save("data.xlsx")
         print("закончил процесс")
 
+    def write_to_excel_merlin(self, smartphones):
+        for row in smartphones:
+            print("пошел процесс")
+            self.sheet.append([row.product_name, row.price, row.in_stock])
+        self.workbook.save("LeroyMerlin.xlsx")
+        print("закончил процесс")
+
         def wait_for_file_ready(file_path, timeout=60):
             """
             Ожидает завершения записи в файл.
