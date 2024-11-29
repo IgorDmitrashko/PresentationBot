@@ -23,7 +23,6 @@ class RozetkaAPI:
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
         }
 
-
     def get_product_details(self):
         querystring = {"country":"UA",
                        "lang":"ru",
@@ -48,9 +47,10 @@ class RozetkaAPI:
         else:
             return {"error": "Request failed", "status_code": response.status_code}
 
+if __name__ == "__main__":
+    rozetka_api = RozetkaAPI()
 
-rozetka_api = RozetkaAPI()
-print(rozetka_api.get_product_details())
+
 
 
 
