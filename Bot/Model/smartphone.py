@@ -7,5 +7,5 @@ class Smartphone:
         self.new_price = new_price
 
     def __repr__(self):
-        return f"имя {self.name}: {self.old_price} -> {self.new_price}"
+        return f"{self.name}: {self.old_price} -> {self.new_price}"
 

@@ -18,6 +18,7 @@ class LeroyMerlin:
             "Referer": "https://example.com"
         }
 
+
     def __get_response(self, url):
         try:
             response = requests.get(url, headers=self.headers)
