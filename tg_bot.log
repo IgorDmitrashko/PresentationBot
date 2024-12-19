@@ -47,3 +47,38 @@
 2024-11-23 19:24:02,530 - ERROR - Failed to send about us: 'NoneType' object has no attribute 'find_all'
 2024-11-23 19:25:34,490 - INFO - About us sent to user 1475149178
 2024-11-23 19:29:15,591 - INFO - About us sent to user 1475149178
+2024-12-19 12:24:14,947 - INFO - Main menu sent to user 1475149178
+2024-12-19 12:24:21,591 - INFO - Start menu sent to user 1475149178
+2024-12-19 12:24:24,759 - INFO - Main menu sent to user 1475149178
+2024-12-19 12:24:26,821 - INFO - About us sent to user 1475149178
+2024-12-19 12:24:29,901 - INFO - Contact processed
+2024-12-19 12:24:31,303 - INFO - Main menu sent to user 1475149178
+2024-12-19 12:24:43,796 - INFO - Main menu sent to user 1475149178
+2024-12-19 12:50:17,879 - INFO - Main menu sent to user 1475149178
+2024-12-19 12:50:49,483 - INFO - Main menu sent to user 1475149178
+2024-12-19 12:50:50,562 - INFO - instructions for communicating with AI have been sent: 1475149178
+2024-12-19 12:51:05,030 - INFO - Ai response sent to user: 1475149178
+2024-12-19 12:52:08,783 - INFO - instructions for communicating with AI have been sent: 1475149178
+2024-12-19 12:52:20,333 - INFO - Ai response sent to user: 1475149178
+2024-12-19 13:02:59,189 - INFO - Main menu sent to user 1475149178
+2024-12-19 13:03:00,284 - INFO - instructions for communicating with AI have been sent: 1475149178
+2024-12-19 13:03:08,468 - INFO - Main menu sent to user 1475149178
+2024-12-19 13:03:09,477 - INFO - instructions for communicating with AI have been sent: 1475149178
+2024-12-19 13:03:28,910 - INFO - Ai response sent to user: 1475149178
+2024-12-19 13:03:54,382 - INFO - Ai response sent to user: 1475149178
+2024-12-19 13:05:13,917 - INFO - Main menu sent to user 1475149178
+2024-12-19 13:05:32,078 - INFO - Ai response sent to user: 1475149178
+2024-12-19 13:06:14,039 - INFO - Ai response sent to user: 1475149178
+2024-12-19 13:07:48,691 - INFO - Main menu sent to user 1475149178
+2024-12-19 13:07:49,698 - INFO - instructions for communicating with AI have been sent: 1475149178
+2024-12-19 13:07:53,014 - INFO - Main menu sent to user 1475149178
+2024-12-19 13:07:54,266 - INFO - instructions for communicating with AI have been sent: 1475149178
+2024-12-19 13:08:21,672 - INFO - Start menu sent to user 1475149178
+2024-12-19 13:08:22,869 - INFO - Main menu sent to user 1475149178
+2024-12-19 13:08:23,709 - INFO - instructions for communicating with AI have been sent: 1475149178
+2024-12-19 13:08:52,345 - INFO - Ai response sent to user: 1475149178
+2024-12-19 13:09:43,406 - INFO - Ai response sent to user: 1475149178
+2024-12-19 13:10:25,400 - INFO - Ai response sent to user: 1475149178
+2024-12-19 13:10:53,874 - INFO - Ai response sent to user: 1475149178
+2024-12-19 13:11:42,519 - INFO - Ai response sent to user: 1475149178
+2024-12-19 13:12:18,030 - INFO - Ai response sent to user: 1475149178

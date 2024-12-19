@@ -20,7 +20,7 @@ class ExcelExporter:
         """
         workbook = openpyxl.Workbook()
         sheet = workbook.active
-        sheet.title = "Products"CData
+        sheet.title = "Products"
 
         headers = ["Name", "Price", "Image"]
         for col_num, header in enumerate(headers, start=1):

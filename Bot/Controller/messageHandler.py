@@ -1,11 +1,13 @@
-from fileinput import filename
+import re
+import logging
 
 from Bot.Controller import base, disposable_mail, excel_table_creator
 from Bot.Model.modelSiteParser import ModelSiteParser
 from Bot.Telegram import bot, button
 from Bot.Model import config
 from Bot.Parser import jsonParser, siteParser, internetMagazinParser
-import logging
+from Bot.AI.huggingFace import HuggingFace
+
 
 bot = bot.Bot(config.BOT_TOKEN)
 disposable_mail = disposable_mail.Disposable_mail()
@@ -24,6 +26,7 @@ class MessageHandler:
         self.site_parser = siteParser.SiteParser()
         self.internet_magazin_parser = internetMagazinParser.InternetMagazinParser()
         self.excel_table = excel_table_creator.ExcelTableCreator(filename= "data.xlsx")
+        self.ai = HuggingFace()
         self.commands_handler()
 
     def commands_handler(self):
@@ -42,6 +45,9 @@ class MessageHandler:
             self.send_about_us(message)
         elif message.text == self.button.vending_machines:
             self.send_vending_menu(message)
+        elif ('ai' in message.text.lower() or 'аі' in message.text.lower()) and not re.search(r'\(.*AI.*\)', message.text):
+            self.send_ai_answer(message)
+
 
     def handle_callback(self, callback):
         handlers = {
@@ -54,6 +60,7 @@ class MessageHandler:
             'orki':self.send_orki,
             'iphone': self.send_price_iphone,
             'films': self.send_top_films,
+            'AI': self.how_to_work_ai,
         }
         handler = handlers.get(callback.data, self.handle_unknown_callback)
         handler(callback)
@@ -66,13 +73,22 @@ class MessageHandler:
         if not self.initialize_database(message):
             return
 
+    def how_to_work_ai(self, callback):
+        try:
+            self.tg_bot.send_message(callback.message.chat.id, text="Для спілкування з АІ потрібно додати 'АІ' в повідомлення можна англійською або уккраїнською, можна з маленької")
+            self.tg_bot.delete_message(callback.message.chat.id, callback.message.message_id)
+            logging.info("instructions for communicating with AI have been sent: %s", callback.message.chat.id)
+        except Exception as ex:
+            logging.error("Failed AI: %s", ex)
+            self.tg_bot.send_message(callback.message.chat.id, f"{self.site_parser.get_top_films()}")
+
     def send_top_films(self, callback):
         try:
             self.tg_bot.send_message(callback.message.chat.id, text=self.site_parser.get_top_films())
             self.tg_bot.delete_message(callback.message.chat.id, callback.message.message_id)
             logging.info("Top films sent to user %s", callback.message.chat.id)
         except Exception as ex:
-            logging.error("Failed to send Top films: %s", ex)
+            logging.error("Failed to send Top films", ex)
             self.tg_bot.send_message(callback.message.chat.id, f"{self.site_parser.get_top_films()}")
 
     def handle_contact(self, message):
@@ -126,6 +142,15 @@ class MessageHandler:
         self.tg_bot.send_message(message.chat.id, "Головне меню", reply_markup=self.button.get_inline_buttons())
         self.tg_bot.delete_message(message.chat.id, message.message_id)
         logging.info("Main menu sent to user %s", message.chat.id)
+
+    def send_ai_answer(self, message):
+        try:
+            self.tg_bot.send_message(message.chat.id, text=self.ai.geterate_answer(message.text))
+            logging.info("Ai response sent to user: %s", message.chat.id)
+        except Exception as ex:
+            logging.error("Failed to send AI: %s", ex)
+            self.tg_bot.send_message(message.chat.id, f"{self.ai.geterate_answer(message.text)}")
+
 
     def send_about_us(self, message):
 
@@ -205,6 +230,9 @@ class MessageHandler:
     def handle_unknown_callback(self, callback):
         self.tg_bot.send_message(callback.message.chat.id, "Невідома команда")
         logging.warning("Unknown command from user %s: %s", callback.message.chat.id, callback.data)
+
+
+
 
 if __name__ == "__main__":
     MessageHandler()

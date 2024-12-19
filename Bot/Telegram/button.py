@@ -15,6 +15,7 @@ class Button:
         self.orki = "Орки"
         self.iphone = "Iphone"
         self.films = "Films"
+        self.AI = "AI"
 
     def get_inline_buttons(self) -> types.InlineKeyboardMarkup:
         buttons = [
@@ -25,6 +26,7 @@ class Button:
             types.InlineKeyboardButton(self.orki, callback_data='orki'),
             types.InlineKeyboardButton(self.iphone, callback_data='iphone'),
             types.InlineKeyboardButton(self.films, callback_data='films'),
+            types.InlineKeyboardButton(self.AI, callback_data='AI'),
         ]
         return types.InlineKeyboardMarkup(row_width=2).add(*buttons)
 
